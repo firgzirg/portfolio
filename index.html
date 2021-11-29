@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Portfoilo</title>
+      <script
+         src="https://code.jquery.com/jquery-3.6.0.min.js"
+         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+         crossorigin="anonymous"></script>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link rel="stylesheet" href="https://unpkg.com/beerslider/dist/BeerSlider.css">
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+   </head>
+   <body>
+      <style type="text/css">
+         body {
+         	background: black;
+         	color: white;
+         	font-family: 'Montserrat', sans-serif;
+         	font-size: 155%;
+         }
+         #wrapper {
+         	width: 62rem;
+         	margin: 0 auto;
+         }
+         #technologies {
+         	display: grid;
+         	grid-template-columns: 2fr 2fr 2fr;
+         }
+         #block {
+         	padding: 15px;
+         	display: flex;
+         	justify-content: center;
+         }
+         #block:hover {
+         	cursor: pointer;
+         	transition: 200ms;
+         	background: #151515;
+         }
+         #container-contacts {
+         	display: grid;
+         	grid-template-columns: 3fr 3fr 3fr 3fr;
+         }
+         #discord, #vk, #telegram, #github {
+         	display: flex;
+         	padding: 15px;
+         	justify-content: center;
+         	font-size: 225%;
+         }
+         #discord:hover, #vk:hover, #telegram:hover, #github:hover {
+         	cursor: pointer;
+         	transition: 200ms;
+         }
+         #discord:hover {
+         	background: #6641b5;
+         }
+         #vk:hover {
+         	background: #416ab5;
+         }
+         #telegram:hover {
+         	background: #2791cf;
+         }
+         #github:hover {
+         	background: #151515;
+         }
+         a {
+         	color: white;
+         	text-decoration: none;
+         }
+         a:hover {
+         	color: white;
+         	text-decoration: underline;
+         }
+         #space {
+         	position: absolute;
+         	height: 200px;
+         	width: 60rem;
+         }
+      </style>
+      <div id="wrapper">
+         <h1>Hi <img src="https://cdn.shopify.com/s/files/1/1061/1924/files/Waving_Hand_Sign_Emoji_Icon_ios10.png?9057686143853941278" width="40px" alt=""></h1>
+         <img src="./photos/screenshot_12.png" width="992px">
+         <p>My name is <b>Max Moldenhauer</b> <i style="color: #c9c9c9">(a.k.a. wulfmeister)</i>, i'm a full-stack developer and big aviation fan.<br>My love for aviation began when I was 4. When i grew up for a little, in 2010 I've started flying in FSX and completing several in-game missions, sometimes making a free-flights with different default planes at Friday Harbour (such a legendary place).<br>
+         <h4>Discovering X-Plane</h4>
+         In 2016, I discovered an X-Plane for myself. Previously, I had some experience of interacting with X'es, but the 11th version 
+         made a huge impression on me. So, that is my main simulator to nowadays.</p>
+         <h2>Portfolio</h2>
+         <p>In 2020 I've started learning SASL for X-Plane 11. It was completely new experience for me.<br><br>There are some videos (recorded in russian) that demonstrates my first steps at learning this library.</p>
+         <iframe width="992px" height="500px" src="https://www.youtube.com/embed/Ws4cgAynIYk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+         <iframe width="992px" height="500px" src="https://www.youtube.com/embed/PlGyHDo4v4o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+         <h3>First project</h3>
+         <p>I've made a lightweight graphics enhancment solution written completely in SASL.<br><br>It don't uses any shaders or another complicated graphics solutions. It based only on dynamic dataref changing (atmosphere scattering, fog, enviroment hue, brightness of sun and it's light "rings") by impact of simulation conditions.</p>
+         <div id="slider" class="beer-slider" data-beer-label="After">
+            <img src="./photos/CirrusSF50 - 2021-08-16 22.30.34.png" alt="">
+            <div class="beer-reveal" data-beer-label="Before">
+               <img src="./photos/CirrusSF50 - 2021-08-16 22.30.20.png" alt="">
+            </div>
+         </div>
+         <div id="slider2" class="beer-slider" data-beer-label="After">
+            <img src="./photos/VSL R66 - 2021-08-13 15.42.33.png" alt="">
+            <div class="beer-reveal" data-beer-label="Before">
+               <img src="./photos/VSL R66 - 2021-08-13 15.42.10.png" alt="">
+            </div>
+         </div>
+         <div id="slider3" class="beer-slider" data-beer-label="After">
+            <img src="./photos/FJS_732_TwinJet - 2021-08-16 17.58.32.png" alt="">
+            <div class="beer-reveal" data-beer-label="Before">
+               <img src="./photos/FJS_732_TwinJet - 2021-08-16 17.58.02.png" alt="">
+            </div>
+         </div>
+         <h3>Custom UI using SASL</h3>
+         <p>One of my latest excersises was making a custom UI (formally inspired by XAPro GUI :D) with buttons and sliders that are not implemented in SASL by default.</p>
+         <iframe width="992px" height="500px" src="https://www.youtube.com/embed/bQfY-QCo52o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+         <h2>Programming languages I can write in</h2>
+         <p>I can write code in such high level with all languages distributed below</p>
+         <div id="technologies">
+            <div id="block">
+               <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Lua-Logo.svg/1200px-Lua-Logo.svg.png" width="95px">
+            </div>
+            <div id="block">
+               <img src="https://web-creator.ru/uploads/Page/19/python.svg" width="90px">
+            </div>
+            <div id="block">
+               <img src="https://cdn.worldvectorlogo.com/logos/c--4.svg" height="90px" alt="">
+            </div>
+         </div>
+         <h2>Technologies</h2>
+         <p>A short list of technologies I've learned on my <s>jedi path</s> code way</p>
+         <div id="technologies">
+            <div id="block">
+               <img src="https://1-sim.com/sites/default/files/logo-lua_0_0.png" height="95px">
+            </div>
+            <div id="block">
+               <img src="https://i.redd.it/tu3gt6ysfxq71.png" height="90px" alt="">
+            </div>
+            <div id="block">
+               <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Blender_logo_no_text.svg/1200px-Blender_logo_no_text.svg.png" height="90px" alt="">
+            </div>
+            <div id="block">
+               <img src="https://lh3.googleusercontent.com/proxy/cuRfpwa5kXToFDyrVAJy7TUwqxpOgEumsUjOVjK_IPhK0DX-p3HaGR_2pyhf1x83LxHh6h0-9c6Pwolmyz8ZyGQA" height="90px">
+            </div>
+            <div id="block">
+               <img src="https://fastapi.tiangolo.com/img/logo-margin/logo-teal.png" height="90px" alt="">
+            </div>
+            <div id="block">
+               <img src="https://www.nginx.com/wp-content/uploads/2018/08/NGINX-logo-rgb-large.png" height="90px" alt="">
+            </div>
+            <div id="block">
+               <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Apache_HTTP_server_logo_%282019-present%29.svg/1200px-Apache_HTTP_server_logo_%282019-present%29.svg.png" height="90px" alt="">
+            </div>
+            <div id="block">
+               <img src="https://mariadb.org/wp-content/themes/twentynineteen-child/icons/logo_seal.svg" height="90px" alt="">
+            </div>
+            <div id="block">
+               <img src="https://cdn.liveagent.com/app/uploads/2020/11/MySQL-Logo.png" height="90px">
+            </div>
+         </div>
+         <h2>Additional experiences</h2>
+         <h3>Fully selfmade scenery</h3>
+         <p>In Februrary 2021 I've tried myself in making sceneries for MSFS. My first attempt was creating a small airport located in westside of Netherlands, Oostwald. All 3Ds used in that scenery was fully selfmade.<br><br>At the moment, my product is not available for purchase.</p>
+         <img width="992px" src="https://secure.simmarket.com/images//products/0/0d/14666/257345_Screenshot_7.png" alt="">
+         <h3>Commercial design</h3>
+         <p>In June 2021 I was involved into Axonos development team. I completely reproduced the KJAC scenery from XPL11 source to MSFS.<br><br>There are some in-dev screenshots provided below.</p>
+         <img width="992px" src="https://sun9-27.userapi.com/impg/zSDCqoeHbQ940vx-wsVXnmQGlD3eGRuF6U55eA/5iiiqC37zFE.jpg?size=1280x893&quality=96&sign=db6cb03ea510e9bfc4f555fcab90372c&type=album" alt="">
+         <img width="992px" src="https://sun9-64.userapi.com/impg/17Y-FJiARCG5HD3SZNfwQ_rd6ZktssxHvtgpnQ/Cjc0kwR7oRc.jpg?size=1280x565&quality=96&sign=cfdc0676c0e7442033f10fdf88538192&type=album" alt="">
+         <img width="992px" src="https://sun9-66.userapi.com/impg/t17GzFik7mgqzKCofm2diVchJv82b3mFPAFgIg/-Eh6vn-rvsM.jpg?size=1280x644&quality=96&sign=ce31ced156459044385b4638e410a7da&type=album" alt="">
+         <h2>If you are interested...</h2>
+         <div id="container-contacts">
+            <div id="discord"><i class="fa-brands fa-discord"></i></div>
+            <div id="vk"><i class="fa-brands fa-vk"></i></div>
+            <div id="telegram"><i class="fa-brands fa-telegram"></i></div>
+            <div id="github"><i class="fa-brands fa-github"></i></div>
+         </div>
+         <div id="space">
+            <p>
+               <br>
+               <b>Max Moldenhauer</b><br>
+               <i style="font-size: 80%">29.11.21</i>
+            </p>
+         </div>
+      </div>
+      <script src="https://unpkg.com/beerslider/dist/BeerSlider.js"></script>
+      <script>
+         new BeerSlider(document.getElementById('slider'));
+         new BeerSlider(document.getElementById('slider2'));
+         new BeerSlider(document.getElementById('slider3'));
+      </script>
+   </body>
+</html>
